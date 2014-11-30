@@ -3020,7 +3020,8 @@ static void put_event(struct perf_event *event)
 	    event->attr.constraint_duplicate)
 		event->state = PERF_EVENT_STATE_ACTIVE;
 
-	file->private_data = NULL;
+    //FIXME: upstream merge conflict
+	//file->private_data = NULL;
 
 	rcu_read_lock();
 	owner = ACCESS_ONCE(event->owner);
